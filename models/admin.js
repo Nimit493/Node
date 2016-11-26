@@ -10,7 +10,5 @@ var admin = new Schema({
 	},
 	amount:Number
 });
-console.log('after schema');
 admin.plugin(passportLocalMongoose);
-console.log('after plugin');
 module.exports = mongoose.model("Admin",admin);	
