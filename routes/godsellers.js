@@ -9,7 +9,7 @@ var jwt = require('jsonwebtoken');
 var config = require('../config.js');
 var bodyParser = require('body-parser');
 router.use(bodyParser.json());
-var client = require('twilio')('AC14e6e781ac71d95e371a849369ae48f1','632122e2975bce6a8a66ea48de33ee4c');
+var client = require('twilio')('','');
 
 
 //*********************GENERAL*******************
@@ -284,7 +284,7 @@ router.post('/check',function(req,res,next){
 	});
 });
 
-//
+//Register customer after verifying OTP
 router.post('/verify',function(req,res,next){
 	var number = req.body.number;
 	var otps = req.body.otp;
